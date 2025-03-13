@@ -6,6 +6,11 @@ import Link from "next/link";
 import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
 
+export const metadata = {
+  title: "All Meals",
+  description: "Browse the delicious meals created by our vibrant community",
+};
+
 async function Meals() {
   const meals = await getMeals();
 
@@ -17,7 +22,7 @@ const MealsPage = () => {
     <>
       <header className={styles.header}>
         <h1>
-          Delicious meals, create{" "}
+          Delicious meals, created{" "}
           <span className={styles.highlight}>by you</span>
         </h1>
         <p>Choose your favorite recipe and cook it for yourself. It is easy.</p>
